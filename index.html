@@ -1,19 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <!-- tailwind css  -->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <!-- extarnal css here  -->
     <link rel="stylesheet" href="css/style.css">
     <title>Open Book Library</title>
 </head>
+
 <body>
-    <h2>Open Book Library</h2>
+    <header>
+        <section class="container mx-auto my-8">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-green-700">Open Book Library</h2>
+                </div>
+                <div class="text-xl">
+                    <input id="input-book" class="border-2 py-2 px-5 rounded-md" type="text"
+                        placeholder="search book by keyword">
+                    <button onclick="getBooks()"
+                        class="border-2 py-2 px-5 rounded-md bg-green-700 text-white border-green-700">Search
+                        Book</button>
+                </div>
+            </div>
+        </section>
+
+    </header>
+    <hr>
+    <main>
+        <section class="container mx-auto my-5">
+            <p class="text-xl">Total Search Found <span id="total-item">00</span></p>
+            <p class="text-xl">Total Search Result Found: <span id="total-num">00</span></p>
+            <!-- flex justify-between items-center flex-wrap -->
+            <div id="display-book" class=" my-5">
+                <h2 id="loading" class="text-center text-4xl my-5 text-yellow-500 font-bold">Search Your Books !! </h2>
+            </div>
+        </section>
+    </main>
 
     <!-- script connected  -->
     <script src="script/app.js"></script>
 </body>
+
 </html>
