@@ -15,9 +15,11 @@ const getBooks = async () => {
     if (inputBookField.value === '') {
         errorMsg.style.display = 'block';
         loading.innerText = '';
+        notFound.style.display = 'none';
     }
     else {
         errorMsg.style.display = 'none';
+        notFound.style.display = 'none';
         try {
             const res = await fetch(url);
             const data = await res.json();
