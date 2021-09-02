@@ -16,6 +16,7 @@ const getBooks = async () => {
         errorMsg.style.display = 'block';
         loading.innerText = '';
         notFound.style.display = 'none';
+        query.innerText = '';
     }
     else {
         errorMsg.style.display = 'none';
@@ -37,6 +38,7 @@ const updateBookData = data => {
     query.innerText = data.q;
     if (data.numFound === 0) {
         loading.innerText = '';
+        query.innerText = ''
         notFound.style.display = 'block';
     } else {
         data.docs.slice(0, 10).forEach(book => {
