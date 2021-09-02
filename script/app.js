@@ -12,6 +12,7 @@ const getBooks = async () => {
     displayBook.innerHTML = '';
     const bookName = inputBookField.value;
     const url = `http://openlibrary.org/search.json?q=${bookName}`
+
     if (inputBookField.value === '') {
         errorMsg.style.display = 'block';
         loading.innerText = '';
@@ -50,8 +51,10 @@ const updateBookData = data => {
 const showData = book => {
     loading.innerText = '';
     const li = document.createElement('li');
-    https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg 
-    book?.cover_i? img = `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg` : img = `../images/notfound.png`;
+    book?.cover_i ?
+        img = `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`
+        :
+        img = `../images/notfound.png`;
 
     li.classList.add("flex", "justify-start", "items-center", "border-2", "py-2", "px-5", "my-2", "bg-green-100");
     li.innerHTML = `
