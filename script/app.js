@@ -50,7 +50,7 @@ const showData = book => {
     const li = document.createElement('li');
     https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg 
     book?.cover_i? img = `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg` : img = `../images/notfound.png`;
-    
+
     li.classList.add("flex", "justify-start", "items-center", "border-2", "py-2", "px-5", "my-2", "bg-green-100");
     li.innerHTML = `
         <figure>
@@ -58,7 +58,7 @@ const showData = book => {
         </figure>
         <div class="ml-8">
             <h2 class="text-4xl my-3">${book.title}</h2>
-            <p class="text-2xl mb-3">Author Name: ${book.author_name}</p>
+            <p class="text-2xl mb-3">Authors: ${book.author_name}</p>
             <p>Publish Date In: ${book.first_publish_year}</p>
         </div>
         `
